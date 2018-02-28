@@ -1,0 +1,489 @@
+body{
+  background: black;
+  color: white;
+
+  p {
+    margin: 1em 0;
+    color: #787878;
+    line-height: 1.3em;
+    text-align: justify;
+  }
+}
+
+hr {
+  width: 6em;
+}
+
+$background-color: rgb(18, 18, 18);
+$main-green: #7dbb2c;
+
+.main-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 800;
+  margin: .5em 0;
+}
+
+.title {
+  display: inline-block;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+.title-description {
+  margin: 1em 0;
+  text-align: center;
+  color: $main-green;
+  line-height: 1.5em;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.center {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5em;
+}
+
+.green-btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  background: $main-green;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 600;
+  padding: 1em;
+  border-radius: 3px;
+  box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.8);
+}
+
+.white-btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: black;
+  background: white;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 600;
+  padding: 1em;
+  border-radius: 3px;
+  box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.8);
+  display: inline-block;
+}
+
+.tel, .email {
+  text-align: center;
+  line-height: 3em;
+    img {
+      position: relative;
+      top: .6em;
+      margin: 0 .5em
+    }
+  }
+
+footer {
+  background: $background-color;
+  width: 100%;
+}
+
+
+//===================================
+
+.main-container {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Roboto', sans-serif;
+
+
+  header {
+    flex: 1;
+    .center {
+      .main-logo {
+        width: 80%;
+        max-width: 370px;
+        margin: auto;
+
+        img {
+          width: 100%;
+          padding-left: 22px;
+        }
+      }
+
+      .main-nav {
+        text-align: center;
+        line-height: 30px;
+
+        li {
+          border-top: 1px solid white;
+          padding: 10px 0;
+
+          a {
+            text-decoration: none;
+            color: white;
+          }
+        }
+      }
+
+      @media screen and (min-width: 700px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        .main-logo {
+          margin: 0;
+
+          img {
+            padding: 0;
+          }
+        }
+
+        .main-nav {
+          ul {
+            display: flex;
+
+            li {
+              border: initial;
+              &:hover {
+                background: $main-green;
+              }
+
+              a {
+                display: inline-block;
+                padding: .7em;
+                font-size: 1.1em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //============= main banner =============
+
+  .main-banner {
+    width: 100%;
+    .social-media {
+      background-color: #181818;
+      .center {
+        ul {
+          line-height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+
+          li {
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            min-height: 30px;
+            min-width: 30px;
+            overflow: hidden;
+            margin-left: .7em;
+
+            img {
+              width: 425%;
+              position: relative;
+            }
+
+            &:first-child {
+
+              img {
+                left: -7px;
+                top: -5px;
+              }
+            }
+
+            &:nth-child(2) {
+
+              img {
+                left: -91px;
+                top: -5px;
+              }
+            }
+
+            &:nth-child(3) {
+
+              img {
+                left: -49px;
+                top: -45px;
+              }
+            }
+
+            &:nth-child(4) {
+
+              img {
+                left: -7px;
+                top: -45px;
+              }
+            }
+          }
+        }
+
+        @media screen and (min-width: 1000px) {
+          display: flex;
+          justify-content: space-between;
+          align-content: center;
+          padding: 0 2em;
+        }
+      }
+    }
+
+    .promo {
+      background: $background-color;
+      padding-top: .1em;
+      padding-bottom: 1em;
+
+      .center {
+        .col3 {
+          margin-top: 2em;
+          display: flex;
+          flex-wrap: wrap;
+
+          .ball {
+            height: 4em;
+            width: 4em;
+            background-color: $main-green;
+            border-radius: 50%;
+            display: inline-block;
+            text-align: center;
+            line-height: 4em;
+          }
+
+          .title {
+            margin-left: 1.5em;
+          }
+        }
+
+        @media screen and (min-width: 1000px) {
+          display: flex;
+          flex-wrap: wrap;
+
+          .col3 {
+            flex: 1;
+
+            .ball {
+              margin: 0 1em;
+            }
+
+            p {
+              padding: 0 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //============= services =============
+
+  .services {
+    padding-top: 2em;
+    background: url("../../src/images/prom.jpg");
+    background-size: cover;
+    width: 100%;
+
+    .container {
+      justify-content: space-around;
+
+      .grid {
+        max-width: 300px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 1em 0;
+
+        img {
+          width: 95%;
+          display: block;
+          align-self: center;
+        }
+
+        h2 {
+          margin-top: 1em;
+          font-size: 14px;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-family: 'Noto Sans', sans-serif;
+        }
+      }
+    }
+  }
+
+  //============= why us =============
+
+  .why-us {
+    background: $background-color;
+    padding-top: 2em;
+    width: 100%;
+
+    .container {
+      justify-content: space-around;
+
+      .col2 {
+        margin: 2em 0;
+        max-width: 400px;
+
+        ul {
+          list-style-type: disc;
+          line-height: 1.3em;
+          color: $main-green;
+
+          li {
+            margin: .5em;
+          }
+        }
+      }
+    }
+  }
+
+  //============= realizacje =============
+
+  .realizations {
+    padding: 2em 0;
+    background: url("../../src/images/realizacje-tlo.jpg");
+    background-size: cover;
+    width: 100%;
+    text-align: center;
+
+    .col2 {
+      margin: 1em;
+      width: 350px;
+      height: 200px;
+
+      .frame-yt {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .green-btn {
+      margin-top: 2em;
+    }
+  }
+
+  //============= about =============
+
+  .about {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background: url("../../src/images/zenmusex5.jpg");
+    width: 100%;
+    background-size: cover;
+    background-position: 70%;
+
+    .container {
+      justify-content: flex-start;
+      max-width: 800px;
+
+      div {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+
+        img {
+          margin: 1em 1.5em 0 0;
+          width: 20%;
+          max-width: 90px;
+        }
+
+        .title {
+          max-width: 500px;
+
+        }
+      }
+    }
+  }
+
+  //============= price promo =============
+
+  .price-promo {
+    background: $main-green;
+    padding: 1em 0;
+    width: 100%;
+    text-align: center;
+
+    .container {
+      align-items: center;
+      justify-content: space-around;
+
+      .title {
+        max-width: 600px;
+        margin: .3em;
+      }
+      
+      .white-btn {
+        margin: .3em;
+      }
+    }
+  }
+
+  //============= contact =============
+
+  .contact {
+    width: 100%;
+    background: url("../../src/images/realizacje-tlo.jpg");
+    background-size: cover;
+    padding: 2em 0;
+
+    .container {
+      justify-content: space-around;
+
+      .col2 {
+        margin: 1em 0;
+        max-width: 550px;
+
+        &:first-child {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+
+          .form {
+            width: 90%;
+            padding: 1em;
+            border-radius: 4px;
+            font-family: "Open Sans", sans-serif;
+            margin-top: 1em;
+          }
+
+          .green-btn {
+            margin-top: 1.5em;
+          }
+        }
+
+        .logo {
+          img {
+            width: 100%;
+          }
+        }
+
+        .tel, .email {
+          text-align: unset;
+          img {
+            margin-left: 0;
+          }
+        }
+
+        p {
+          margin: 1em 0 0 0;
+        }
+      }
+    }
+  }
+}
+
+
+
