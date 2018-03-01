@@ -1,5 +1,8 @@
+$background-color: rgb(18, 18, 18);
+$main-green: #7dbb2c;
+
 body{
-  background: black;
+  background: $background-color;
   color: white;
 
   p {
@@ -13,9 +16,6 @@ body{
 hr {
   width: 6em;
 }
-
-$background-color: rgb(18, 18, 18);
-$main-green: #7dbb2c;
 
 .main-title {
   text-transform: uppercase;
@@ -84,7 +84,7 @@ $main-green: #7dbb2c;
   line-height: 3em;
     img {
       position: relative;
-      top: .6em;
+      top: .7em;
       margin: 0 .5em
     }
   }
@@ -98,7 +98,7 @@ footer {
 //===================================
 
 .main-container {
-  max-width: 1500px;
+  max-width: 1927px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -174,8 +174,44 @@ footer {
 
   .main-banner {
     width: 100%;
+
+    #slider {
+      width: 100%;
+      //height: 24vw;
+      height: 40vw;
+      max-height: 500px;
+      overflow: hidden;
+
+
+      .slide {
+        position: relative;
+        height: 100%;
+        left: -27%;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      @media screen and (min-width: 700px) {
+        height: 24vw;
+
+        .slide {
+          width: 100%;
+          height: initial;
+          left: initial;
+
+          img {
+            width: 100%;
+            height: initial;
+          }
+        }
+      }
+    }
+
     .social-media {
       background-color: #181818;
+      font-size: .9em;
       .center {
         ul {
           line-height: 50px;
@@ -424,7 +460,7 @@ footer {
         max-width: 600px;
         margin: .3em;
       }
-      
+
       .white-btn {
         margin: .3em;
       }
@@ -474,6 +510,7 @@ footer {
           text-align: unset;
           img {
             margin-left: 0;
+            top: .6em;
           }
         }
 
