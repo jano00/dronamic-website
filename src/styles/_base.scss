@@ -108,6 +108,7 @@ footer {
   header {
     flex: 1;
     .center {
+      padding: 0;
       .main-logo {
         width: 80%;
         max-width: 370px;
@@ -138,6 +139,7 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0 1.5em;
 
 
         .main-logo {
